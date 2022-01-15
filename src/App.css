@@ -1,0 +1,31 @@
+.toast {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  padding: 0 10px;
+  width: 300px;
+  margin: 10px auto;
+  column-gap: 5px;
+  justify-content: center;
+}
+
+.green {
+  background-color: lightgreen;
+}
+
+.red {
+  background-color: lightcoral;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.toast-input {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  width: 300px;
+  margin: 10px auto;
+  justify-content: center;
+}
