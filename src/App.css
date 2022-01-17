@@ -3,10 +3,20 @@
   flex-direction: row;
   border: 1px solid black;
   padding: 0 10px;
-  width: 300px;
+  min-width: 300px;
   margin: 10px auto;
   column-gap: 5px;
   justify-content: center;
+  width: fit-content;
+}
+
+.animated-toast {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: animated-toast;
+  animation-name: animated-toast;
 }
 
 .green {
@@ -28,4 +38,26 @@
   width: 300px;
   margin: 10px auto;
   justify-content: center;
+}
+
+@-webkit-keyframes animated-toast {
+  0% {
+     opacity: 0;
+     -webkit-transform: translateY(100%);
+  }
+  100% {
+     opacity: 1;
+     -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes animated-toast {
+  0% {
+     opacity: 0;
+     transform: translateY(100%);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
 }

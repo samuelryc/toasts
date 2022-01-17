@@ -8,19 +8,22 @@ function App() {
       id: 1,
       message: 'Hello World!',
       icon: '👋',
-      status: 'green'
+      status: 'green',
+      isNew: false
     },
     {
       id: 2,
       message: 'Hello John!',
       icon: '👋',
-      status: 'red'
+      status: 'red',
+      isNew: false
     },
     {
       id: 3,
       message: 'Hello Bob!',
       icon: '👋',
-      status: 'blue'
+      status: 'blue',
+      isNew: false
     },
   ]);
   const [toastCurrentId, setToastCurrentId] = useState(4);
@@ -33,13 +36,18 @@ function App() {
   function toastInputSubmit() {
     event.preventDefault();
     
+    if (toastContent.trim().length === 0) {
+      return;
+    }
+
     setToasts([
       ...toasts,
       {
         id: toastCurrentId,
         message: toastContent,
         icon: '👋',
-        status: 'green'
+        status: 'green',
+        isNew: true
       }
     ]);
 
