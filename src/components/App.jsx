@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <ToastContext.Provider value={{toasts, setToasts}}>
-        <ToastFormInput  />
+        <ToastFormInput />
         <ToastList />
       </ToastContext.Provider>
     </div>
